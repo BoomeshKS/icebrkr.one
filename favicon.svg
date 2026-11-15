@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0A0A0C"/>
+  <!-- Three iconic indicator bars -->
+  <rect x="12" y="14" width="8" height="12" rx="2" fill="#FF203D"/>
+  <rect x="24" y="14" width="8" height="12" rx="2" fill="#FDE6B2"/>
+  <rect x="36" y="14" width="8" height="12" rx="2" fill="#AAEAB6"/>
+  <!-- i stem and dot / mark -->
+  <rect x="12" y="32" width="10" height="20" rx="3" fill="#FFFFFF"/>
+  <rect x="28" y="32" width="10" height="20" rx="3" fill="#FFFFFF"/>
+</svg>

@@ -44,9 +44,25 @@ Head links
 <meta name="msapplication-TileColor" content="#000000" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-mobile-web-app-title" content="Nexsas" />
-<meta name="application-name" content="Nexsas" />
+<meta name="apple-mobile-web-app-title" content="icebrkr" />
+<meta name="application-name" content="icebrkr" />
+<meta name="msapplication-tooltip" content="icebrkr - AI Life OS" />
+<meta name="msapplication-starturl" content="/" />
 
+<!-- Favicon and Icons -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png?v=3" />
+<link rel="shortcut icon" href="favicon.ico?v=3" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=3" />
+<link rel="manifest" href="site.webmanifest?v=3" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com/" />
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"
+  rel="stylesheet"
+/>
 
     <title>icebrkr - AI Proactive Assistant | Privacy by Architecture</title>
     
@@ -162,30 +178,25 @@ Header v1
 
   <!-- Mobile Sidebar Menu -->
   <aside
-    class="sidebar fixed top-0 right-0 z-50 h-screen w-full translate-x-full transition-transform duration-300 ease-in-out sm:w-1/2"
+    class="sidebar dark:bg-background-8 scroll-bar fixed top-0 right-0 z-[9999] h-screen w-full translate-x-full rounded-l-3xl bg-white transition-all duration-300 sm:w-1/2 xl:hidden"
   >
-    <div class="absolute inset-0 bg-black/50 backdrop-blur-[20px]"></div>
-    <div
-      class="sidebar-content bg-background-2 dark:bg-background-7 relative z-10 flex h-full flex-col justify-between overflow-y-auto p-6"
-    >
+    <div class="space-y-4 p-5 sm:p-8 lg:p-9 flex flex-col h-full justify-between">
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-stroke-1 dark:border-white/10">
           <a href="index.html">
-            <img src="images/shared/icebrkr-logo.png" alt="icebrkr" class="h-7 w-auto dark:hidden" />
-            <img src="images/shared/icebrkr-logo-dark.png" alt="icebrkr" class="h-7 w-auto hidden dark:block" />
+            <span class="sr-only">Home</span>
+            <figure class="max-w-[130px]">
+              <img src="images/shared/icebrkr-logo.png" alt="icebrkr" class="block h-7 w-auto dark:hidden" />
+              <img src="images/shared/icebrkr-logo-dark.png" alt="icebrkr" class="hidden h-7 w-auto dark:block" />
+            </figure>
           </a>
           <button
-            class="nav-close flex size-9 cursor-pointer items-center justify-center rounded-full bg-secondary/5 transition-all duration-200 hover:bg-secondary/10 dark:bg-white/5 dark:hover:bg-white/10"
+            class="nav-hamburger-close bg-background-4 dark:bg-background-9 relative flex size-10 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-full"
             aria-label="Close menu"
           >
-            <svg
-              class="stroke-secondary dark:stroke-accent h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            <span class="sr-only">Close Menu</span>
+            <span class="bg-stroke-9/60 dark:bg-stroke-1 absolute block h-0.5 w-4 rotate-45"></span>
+            <span class="bg-stroke-9/60 dark:bg-stroke-1 absolute block h-0.5 w-4 -rotate-45"></span>
           </button>
         </div>
         <ul class="space-y-3 pt-6">
@@ -233,10 +244,10 @@ Header v1
           </li>
         </ul>
       </div>
-      <div class="pt-6">
+      <div class="pt-6 pb-4">
         <a
           href="#early-access"
-          class="btn btn-md btn-secondary hover:btn-white dark:btn-accent dark:hover:btn-transparent w-full"
+          class="btn btn-md btn-secondary hover:btn-white dark:btn-accent dark:hover:btn-transparent w-full text-center"
         >
           <span>Get early access</span>
         </a>
@@ -253,18 +264,28 @@ hero section
   class="relative bg-white dark:bg-background-8 z-0 sm:pb-0 pb-14 lg:-mb-12 md:-mb-10 overflow-hidden"
   id="scene"
 >
-  <!-- Background Static Image (Replacing Video) -->
+  <!-- Video Background Animation -->
   <figure class="absolute h-full w-full hero-bg-overlay-light dark:hero-bg-overlay-dark"></figure>
-  <img
-    src="images/ns-img-26.jpg"
-    alt="Hero Background Light"
+  <video
     class="w-full h-full absolute -top-[220px] left-0 scale-100 object-cover object-center z-[-1] min-h-[100vh] dark:hidden block"
-  />
-  <img
-    src="images/ns-img-dark-10.png"
-    alt="Hero Background Dark"
+    autoplay=""
+    muted=""
+    loop=""
+    playsinline=""
+  >
+    <source src="video/Tube.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <video
     class="w-full h-full absolute -top-[220px] left-0 scale-100 object-cover object-center z-[-1] min-h-[100vh] hidden dark:block"
-  />
+    autoplay=""
+    muted=""
+    loop=""
+    playsinline=""
+  >
+    <source src="video/Tube-dark.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
   <div
     class="relative sm:pt-[280px] pt-[160px] pb-[140px] max-[641px]:pb-16 max-[426px]:pb-10 z-10"
@@ -2823,6 +2844,16 @@ Theme Toggle Button
 <script src="vendor/stack-card.min.js"></script>
 
 <script src="assets/main.js"></script>
+<script>
+  // Close mobile sidebar when clicking on menu links
+  document.querySelectorAll('.sidebar a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var sidebar = document.querySelector('.sidebar');
+      if (sidebar) sidebar.classList.remove('show-sidebar');
+      document.body.classList.remove('overflow-hidden');
+    });
+  });
+</script>
 </footer>
 
     <!-- =========================
